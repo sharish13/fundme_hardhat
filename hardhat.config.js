@@ -17,6 +17,7 @@ const KOVAN_RPC_URL =
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 
 const RINKEBY_RPC_URL = process.env.RINKKEBY_RPC_URL
+const ARBITRUM_RPC_URL = process.env.ARBITRUM_RPC_URL
 
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || ""
 
@@ -37,6 +38,11 @@ module.exports = {
             url: RINKEBY_RPC_URL,
             accounts: [PRIVATE_KEY],
             chainId: 4,
+        },
+        arbitrum: {
+            url: ARBITRUM_RPC_URL,
+            accounts: [PRIVATE_KEY],
+            chainId: 42161,
         },
     },
     solidity: {
